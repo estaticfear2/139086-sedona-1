@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Вячеслав Сливка](https://up.htmlacademy.ru/adaptive/10/user/139086).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Позднякова] (https://htmlacademy.ru/profile/lizzy).
 
 ---
 
