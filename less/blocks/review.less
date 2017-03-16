@@ -1,0 +1,41 @@
+.review {
+  .container-inner();
+
+  &__item {
+    position: relative;
+    padding-top: 60px;
+    border: none;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  &__title {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    transform: translateX(-50%);
+  }
+
+  &__label {
+    display: block;
+    line-height: 26px;
+    color: #333333;
+    text-align: left;
+  }
+
+  &__btn {
+    width: 100%;
+    display: block;
+    padding: 15px 0;
+    border: none;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: white;
+    background-color: @bg-blue;
+    text-decoration: none;
+  }
+}
