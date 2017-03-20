@@ -1,0 +1,28 @@
+.features {
+
+  &--blue {
+    background-color: @bg-blue;
+    color: white;
+  }
+
+  &--gray {
+    background-color: @bg-gray;
+
+    .features__item:not(:last-child) {
+      border-bottom: 1px solid #d6d6d6;
+    }
+  }
+
+  &__item {
+    .container();
+
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+
+}
