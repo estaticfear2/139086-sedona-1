@@ -61,12 +61,16 @@
           <fieldset class="review__item review__item--contacts">
             <legend class="review__title">Контактная информация:</legend>
             <div class="review__wrapper">
-              <label class="review__label review__label--phone" for="phone"><span class="visually-hidden">Контактный&nbsp;</span>телефон*:
-              </label>
-              <input class="review__input review__input--margin" type="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" name="phone" id="phone" placeholder="Введите телефон" required title="В формате 1-111-1111111">
-              <span class="review__error review__error--show">Ошибка, перепроверьте номер</span>
-              <label class="review__label review__label--email" for="email">Электронная почта*:</label>
-              <input class="review__input review__input--margin" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+              <div class="review__wrapper review__wrapper--half">
+                <label class="review__label review__label--phone" for="phone"><span class="visually-hidden">Контактный&nbsp;</span>телефон*:
+                </label>
+                <input class="review__input review__input--margin" type="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" name="phone" id="phone" placeholder="Введите телефон" required title="В формате 1-111-1111111">
+                <span class="review__error review__error--show">Ошибка, перепроверьте номер</span>
+              </div>
+              <div class="review__wrapper review__wrapper--half">
+                <label class="review__label review__label--email" for="email">Электронная почта*:</label>
+                <input class="review__input review__input--margin" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+              </div>
             </div>
           </fieldset>
 
@@ -89,7 +93,7 @@
           <fieldset class="review__item review__item--sights">
             <legend class="review__title">Посещенные достопримечательности:</legend>
             <div class="review__wrapper review__wrapper--sights">
-            <label class="review__label review__label--checkbox">
+            <label class="review__label review__label--checkbox review__label--bridge">
               <input class="review__toggle" type="checkbox" name="bridge" checked>
               <span class="review__toggle-indicator"></span>Мост Дьявола
             </label>
@@ -97,7 +101,7 @@
               <input class="review__toggle" type="checkbox" name="park" checked>
               <span class="review__toggle-indicator"></span>Слайд-парк
             </label>
-            <label class="review__label review__label--checkbox">
+            <label class="review__label review__label--checkbox review__label--mountain">
               <input class="review__toggle" type="checkbox" name="mountain">
               <span class="review__toggle-indicator"></span>Гора-Колокол
             </label>
@@ -133,7 +137,7 @@
             <a class="social-links__item social-links__item--yt" href="#"></a>
           </li>
         </ul>
-        <p class="page-footer__copyright">
+        <p class="page-footer__copyright page-footer__copyright--inner-form">
           <b>Разработано</b>
           <a href="#" class="page-footer__copyright-icon"><b class="visually-hidden">HTML Academy</b></a>
         </p>
