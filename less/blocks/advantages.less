@@ -1,13 +1,17 @@
 .advantages {
   .container();
 
+  margin-top: 36px;
+  margin-bottom: 37px;
+
   &__item {
-    padding-left: 50px;
+    padding-left: 42px;
     text-align: left;
   }
 
   &__title {
     position: relative;
+    margin-bottom: 14px;
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
@@ -16,7 +20,7 @@
       content: "";
       position: absolute;
       top: -8px;
-      left: -45px;
+      left: -48px;
       width: 38px;
       height: 36px;
       background-repeat: no-repeat;
@@ -29,11 +33,76 @@
     }
 
     &--gift::before {
+      top: -12px;
+      width: 32px;
+      height: 38px;
       background-image: url("../img/icon-gift.svg");
+
     }
 
     &--burger::before {
       background-image: url("../img/icon-burger.svg");
+    }
+  }
+
+  &__description {
+    margin-bottom: 29px;
+    color: #333333;
+  }
+}
+
+@media @tablet-widths {
+  .advantages {
+    width: auto;
+    display: flex;
+    margin-bottom: 0;
+
+    &__item {
+      width: 33.3333%;
+      padding: 100px 47px;
+      padding-bottom: 35px;
+      flex-grow: 1;
+
+      &--gift {
+        order: 1;
+      }
+    }
+
+    &__title {
+      margin-bottom: 21px;
+      font-size: 21px;
+      text-align: center;
+
+      &::before {
+        top: -99px;
+        left: 50%;
+        width: 75px;
+        height: 72px;
+        transform: translatex(-50%);
+      }
+
+      &--gift::before {
+        width: 64px;
+        height: 75px;
+      }
+    }
+
+    &__description {
+      text-align: center;
+    }
+  }
+}
+
+@media @desktop-widths {
+
+  .advantages {
+
+    &__item {
+      padding-bottom: 56px;
+    }
+
+    &__title {
+      margin-bottom: 22px;
     }
   }
 }
