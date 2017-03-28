@@ -3,19 +3,45 @@
   &--blue {
     background-color: @bg-blue;
     color: white;
+    position: relative;
+
+    &:first-child::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      top: -37px;
+      left: 50%;
+      border-left: 384px solid @bg-blue;
+      border-right: 384px solid @bg-blue;
+      border-top: 37px solid white;
+      transform: translateX(-50%);
+    }
   }
 
   &--gray {
     background-color: @bg-gray;
+    color: #333333;
+
+    .features__item {
+      padding-top: 9px;
+      padding-bottom: 15px; //такие селекторы допустимы по БЭМ?
+    }
 
     .features__item:not(:last-child) {
       border-bottom: 1px solid #d6d6d6;
+    }
+
+    .features__title {
+      color: black;
     }
   }
 
   &__item {
     .container();
-
+    padding: 22px;
+    padding-bottom: 27px;
+//    color: #333333;
     text-align: center;
   }
 
@@ -23,6 +49,105 @@
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
+    margin-bottom: 9px;
   }
 
+  &__number {
+    margin-top: 9px;
+  }
+
+  &__description .visually-hidden {
+    display: none;
+  }
+
+  &__image img {
+    width: auto;
+    min-height: 260px;     //для сетки
+    vertical-align: bottom;
+  }
+}
+
+@media @tablet-widths {
+
+  .features {
+
+    display: flex;
+
+    &--blue:first-child::before {
+      display: none;
+    }
+
+    &--gray {
+      padding-top: 14px;
+
+      .features__item {
+        padding-bottom: 30px;
+
+        &:not(:last-child) {
+          border-bottom: none;
+        }
+      }
+
+      .features__title {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+    }
+
+    &__item {
+      width: 33.3333%;
+      padding: 23px 45px;
+      padding-bottom: 32px;
+      box-sizing: border-box;
+
+      &--order {
+        order: 2;
+      }
+    }
+
+    &__title {
+      font-size: 21px;
+      margin-bottom: 11px;
+    }
+
+    &__number {
+      margin-bottom: 21px;
+      }
+
+    &__description .visually-hidden {
+      display: inline;
+    }
+
+    &__image {
+      width: 66.6667%;
+
+      img {
+        height: 256px;
+        min-height: 256px;
+      }
+    }
+  }
+}
+
+@media @desktop-widths {
+  .features {
+
+    &--gray {
+      .features__item {
+        padding-bottom: 52px;
+      }
+    }
+
+    &__item {
+      padding-top: 30px;
+    }
+
+    &__image {
+
+      img {
+        display: block;
+
+      }
+    }
+  }
 }
