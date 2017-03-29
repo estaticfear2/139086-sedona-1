@@ -270,15 +270,13 @@
       width: 100%;
 
       &--sights {
+        width: 79.9383%;
+        height: 216px;
         margin: 0 auto;
         margin-bottom: 17px;
         padding-top: 11px;
         justify-content: flex-start;
         flex-direction: column;
-        align-content: c;
-        width: 79.9383%;
-        height: 216px;
-
         overflow-x: auto;
       }
     }
@@ -352,54 +350,100 @@
       .visually-hidden();
     }
 
-    &__item--evaluation {
-
-      .review__title {
-        margin-left: 80px;
-      }
-
-      .radio-indicator {
-        margin-right: 24px;
-      }
-    }
-
     &__item--user-data {
       width: 41.6667%;
     }
 
     &__item--contacts {
       margin-top: 65px;
-      padding-top: 42px;
+      margin-bottom: 52px;
+    }
 
-      .review__label {
-        margin-left: 0;
-        display: flex;
+    &__wrapper--half {
+      position: relative;
+      width: 400px;
+      padding-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+
+      &:last-child {
+        width: 480px;
       }
+    }
 
-      .review__phone {
-        margin-left: 0;
-        width: 41.6661%;
-        margin-right: auto;
+    &__label--phone,
+    &__label--email {
+      order: 0;
+      width: auto;
+      margin: 0;
+      margin-right: 18px;
+      align-self: center;
+    }
+
+    &__label--email {
+
+    }
+
+    &__error {
+      display: none;
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: 0;
+
+      &--show {
+        display: inline;
       }
+    }
 
-      .review__email {
-        width: 50%;
-      }
+    &__input--margin {
+      width: auto;
+      flex-grow: 1;
+      margin-bottom: 0;
 
-      .review__input {
-        width: 100%;
-        box-sizing: border-box;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
 
     &__wrapper--sights {
-      width: 100%;
       flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      margin-bottom: 56px;
+      overflow-x: hidden;
+    }
+
+    &__label--checkbox .review__toggle-indicator {
+      margin-left: 0;
     }
 
     &__label--checkbox {
       width: auto;
+
+      &:last-child {
+        padding-top: 0;
+        margin-bottom: 11px;
+      }
     }
 
+    &__label--bridge,
+    &__label--mountain {
+      order: -1;
+    }
+
+    &__item--message {
+
+    }
+
+    &__btn-wrapper {
+      margin-bottom: 65px;
+    }
   }
 }
