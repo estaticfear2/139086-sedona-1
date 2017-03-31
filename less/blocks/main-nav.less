@@ -121,6 +121,20 @@
     color: black;
   }
 
+  .main-nav__item--active {
+    a {
+      color: #766357;
+    }
+
+    &:hover a {
+      color: #604e43;
+    }
+
+    &:active a {
+      color: rgba(118, 99, 87, .3);
+    }
+  }
+
   .main-nav__item a[href] {
 
     &:hover {
@@ -129,7 +143,7 @@
     }
 
     &:active {
-      color: rgba(0, 0, 0, 0.3);
+      color: rgba(0, 0, 0, .3);
     }
   }
 

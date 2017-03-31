@@ -28,7 +28,14 @@
     vertical-align: middle;
     width: 27px;
     height: 34px;
-    background-image: url("../img/logo-htmlacademy.svg");
+
+    &:hover .htmlacademy-logo {
+      fill: @bg-blue;
+    }
+
+    &:active .htmlacademy-logo {
+      fill: rgba(0, 0, 0, .3);
+    }
 
     .visually-hidden {
       .visually-hidden();

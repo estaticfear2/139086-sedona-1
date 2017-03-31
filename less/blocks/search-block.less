@@ -1,6 +1,7 @@
 .search-block {
   .container-inner();
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  color: black;
 
   &__title {
     margin-bottom: 22px;
@@ -29,13 +30,22 @@
     color: white;
     background-color: @bg-blue;
     text-decoration: none;
+
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      background-color: #5496bd;
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
 @media @tablet-widths {
   .search-block {
     width: auto;
-    margin-bottom: 58px;
+    padding-bottom: 57px;
 
     &__title {
       padding-top: 23px;
@@ -61,7 +71,7 @@
 
 @media @desktop-widths {
   .search-block {
-    margin-bottom: 67px;
+    padding-bottom: 67px;
 
     &__text {
       margin-bottom: 47px;
