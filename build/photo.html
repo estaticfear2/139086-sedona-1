@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона - Каталог гостиниц</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="photo-page">
+    <div class="page-wrapper">
+      <header class="page-header">
+        <h1 class="visually-hidden">HTML Academy: Седона</h1>
+        <a href="index.html" class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" width="187" height="96" alt="Sedona-Logo">
+          </picture>
+        </a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item main-nav__item--active">
+              <a>Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
+          <a class="main-nav__toggle main-nav__toggle--open" title="Закрыть меню"></a>
+        </nav>
+      </header>
+
+      <main class="index-content">
+
+        <div class="index-content__image index-content__image--inner">
+          <img src="img/text-sedona.svg" width="229" height="39">
+        </div>
+        <h2 class="index-content__title index-content__title--inner">Фото и видео</h2>
+        <p class="index-content__lead-in index-content__lead-in--inner">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+
+        <div class="gallery">
+
+          <section class="gallery__item gallery__item--current">
+            <a href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg" width="280" height="280" alt="Неродные просторы">
+              </picture>
+            </a>
+            <footer class="gallery__footer gallery__footer--current">
+              <h3 class="gallery__title">Неродные просторы</h3>
+              <p class="gallery__info">Автор фото:
+                <span class="gallery__author">Борис</span>
+              </p>
+              <span class="gallery__likes">1350</span>
+            </footer>
+          </section>
+
+          <section class="gallery__item">
+            <a href="#">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg" width="280" height="280" alt="Неродные просторы">
+              </picture>
+            </a>
+            <footer class="gallery__footer">
+              <h3 class="gallery__title">Местная растительность</h3>
+              <p class="gallery__info">Автор фото:
+                <span class="gallery__author">Сергей</span>
+              </p>
+              <span class="gallery__likes">143</span>
+            </footer>
+          </section>
+
+          <section class="gallery__item">
+            <a href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg" width="280" height="280" alt="Неродные просторы">
+              </picture>
+            </a>
+            <footer class="gallery__footer">
+              <h3 class="gallery__title">Дорога на север</h3>
+              <p class="gallery__info">Автор фото:
+                <span class="gallery__author">Петр</span>
+              </p>
+              <span class="gallery__likes">96</span>
+            </footer>
+          </section>
+
+          <section class="gallery__item">
+            <a href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg" width="280" height="280" alt="Неродные просторы">
+              </picture>
+            </a>
+            <footer class="gallery__footer">
+              <h3 class="gallery__title">Мост дьявола</h3>
+              <p class="gallery__info">Автор фото:
+                <span class="gallery__author">Антон</span>
+              </p>
+              <span class="gallery__likes">254</span>
+            </footer>
+          </section>
+
+        </div>
+
+        <div class="video">
+          <h2 class="video__title">Все еще сомневаетесь?</h2>
+          <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <video width="320" height="201">
+          </video>
+          <div class="video-controls">
+            <div class="video-controls__scale-controls">
+              <div class="video-controls__scale">
+                <button class="video-controls__toggle-scale" type="button"></button>
+              </div>
+            </div>
+            <div class="video-controls__main-controls">
+              <button class="video-controls__play-btn" type="button"></button>
+              <button class="video-controls__subtitle-btn"></button>
+              <button class="video-controls__fullscreen-btn"></button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <p class="page-footer__tag">#visitsedona</p>
+
+        <ul class="page-footer__social social-links">
+          <li>
+            <a class="social-links__item social-links__item--tw" href="#"></a>
+          </li>
+          <li>
+            <a class="social-links__item social-links__item--fb" href="#"></a>
+          </li>
+          <li>
+            <a class="social-links__item social-links__item--yt" href="#"></a>
+          </li>
+        </ul>
+        <p class="page-footer__copyright">
+          <b>Разработано</b>
+          <a href="#" class="page-footer__copyright-icon">
+            <b class="visually-hidden">HTML Academy</b>
+            <svg class="htmlacademy-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+            </svg>
+          </a>
+        </p>
+      </footer>
+    </div>
+<!--    <script src="js/script.js"></script>-->
+  </body>
+</html>
