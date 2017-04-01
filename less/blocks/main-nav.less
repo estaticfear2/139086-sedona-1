@@ -5,8 +5,8 @@
 
 .main-nav--closed .main-nav__toggle {
   position: absolute;
-  bottom: -37px;
-  right: 15px;
+  top: 17px;
+  right: 20px;
   display: block;
   width: 23px;
   height: 22px;
@@ -17,7 +17,7 @@
 
 .main-nav--opened .main-nav__toggle {
   position: absolute;
-  top: 3px;
+  top: 10px;
   right: 10px;
   width: 36px;
   height: 36px;
@@ -26,11 +26,11 @@
   &::after {
     content: "";
     position: absolute;
-    top: 18px;
+    top: 17px;
     left: 0;
 
-    width: 36px;
-    height: 2px;
+    width: 29px;
+    height: 4px;
 
     background-color: #ffffff;
   }
@@ -121,6 +121,20 @@
     color: black;
   }
 
+  .main-nav__item--active {
+    a {
+      color: #766357;
+    }
+
+    &:hover a {
+      color: #604e43;
+    }
+
+    &:active a {
+      color: rgba(118, 99, 87, .3);
+    }
+  }
+
   .main-nav__item a[href] {
 
     &:hover {
@@ -129,7 +143,7 @@
     }
 
     &:active {
-      color: rgba(0, 0, 0, 0.3);
+      color: rgba(0, 0, 0, .3);
     }
   }
 

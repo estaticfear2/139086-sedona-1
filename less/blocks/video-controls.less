@@ -1,0 +1,88 @@
+.video-controls {
+  position: relative;
+
+  width: 280px;
+  height: 101px;
+  top: -45px;
+  margin: 0 auto;
+
+  &__scale-controls {
+    padding-top: 22px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, .4);
+    box-sizing: border-box;
+  }
+
+  &__scale {
+    position: relative;
+    width: 235px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, .2);
+  }
+
+  &__toggle-scale {
+    position: absolute;
+    top: -3px;
+    left: 15.32%;
+    margin: 0;
+    padding: 0;
+    width: 9px;
+    height: 9px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__main-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    height: 66px;
+    background-color: #f2f2f2;
+  }
+
+  &__play-btn {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 16px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url("../img/icon-video-replay.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &__subtitle-btn {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    border: none;
+    width: 32px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url("../img/icon-video-subtitles.svg");
+    background-position: 0 0;
+  }
+
+  &__fullscreen-btn {
+    padding: 0;
+    margin: 0;
+    margin-left: 28px;
+    border: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url("../img/icon-video-fullscreen.svg");
+    background-position: 0 0;
+  }
+}
+
+@media @tablet-widths {
+  .video-controls {
+    width: 100%;
+  }
+}

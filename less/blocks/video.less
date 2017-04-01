@@ -1,10 +1,12 @@
 .video {
 
+  padding-bottom: 10px;
+
   &__title {
 
     .container-inner();
 
-    margin-bottom: 27px;
+    margin-bottom: 26px;
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
@@ -21,7 +23,18 @@
   }
 
   video {
-    margin-bottom: 107px;
+    display: block;
+    width: 320px;
+    height: 201px;
+    margin: 0 auto;
+    background-image: url("../img/video-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background-image: url("../img/video-mobile@2x.jpg");
+    }
   }
 }
 
@@ -33,15 +46,24 @@
       margin-bottom: 25px;
       font-size: 30px;
       line-height: 36px;
+      color: black;
     }
 
     &__text {
       width: 440px;
+      margin-bottom: 70px;
     }
 
     video {
+      width: 648px;
       height: 499px;
-      margin-bottom: 80px;
+      background-image: url("../img/video-tablet@1x.jpg");
+      background-size: cover;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+          background-image: url("../img/video-tablet@2x.jpg");
+      }
     }
   }
 }
