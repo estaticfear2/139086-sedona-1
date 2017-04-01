@@ -120,11 +120,20 @@
         <div class="video">
           <h2 class="video__title">Все еще сомневаетесь?</h2>
           <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-          <video controls preload="metadata" width="320" height="201">
-            <source src="#" type="">
-            <source src="#" type="">
-            <source src="#" type="">
+          <video width="320" height="201">
           </video>
+          <div class="video-controls">
+            <div class="video-controls__scale-controls">
+              <div class="video-controls__scale">
+                <button class="video-controls__toggle-scale" type="button"></button>
+              </div>
+            </div>
+            <div class="video-controls__main-controls">
+              <button class="video-controls__play-btn" type="button"></button>
+              <button class="video-controls__subtitle-btn"></button>
+              <button class="video-controls__fullscreen-btn"></button>
+            </div>
+          </div>
         </div>
       </main>
 
