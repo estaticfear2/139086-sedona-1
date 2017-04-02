@@ -303,6 +303,7 @@ body {
 .index-content {
   width: auto;
   background-color: white;
+  overflow: hidden;
 }
 .index-content__image {
   position: relative;
@@ -570,21 +571,36 @@ body {
   border: 0;
 }
 .social-links {
-  font-size: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
-  vertical-align: top;
 }
 .social-links li {
   display: inline-block;
 }
 .social-links__item {
-  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 46px;
   height: 48px;
   margin-left: 6px;
   background-color: #81b3d2;
+  vertical-align: bottom;
+  text-align: center;
+  box-sizing: border-box;
+}
+.social-links__item svg {
+  fill: white;
 }
 .social-links__item--tw {
   margin-left: 0;
@@ -594,6 +610,9 @@ body {
 }
 .social-links__item:active {
   background-color: #5496bd;
+}
+.social-links__item:active svg {
+  opacity: .3;
 }
 /* ----------form.html--------------*/
 .review__item {
@@ -726,10 +745,19 @@ body {
   background-color: #f2f2f2;
   border: 17px solid #f2f2f2;
 }
-.review__toggle:checked + .review__toggle-indicator {
-  background-image: url("../img/icon-tick.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 5px;
+.review__toggle + .review__toggle-indicator svg {
+  display: none;
+}
+.review__toggle:checked + .review__toggle-indicator svg {
+  display: block;
+}
+.review__toggle:active + .review__toggle-indicator {
+  background-color: #d5d5d5;
+  border-color: #d5d5d5;
+}
+.review__toggle:active + .review__toggle-indicator svg {
+  display: block;
+  fill: rgba(0, 0, 0, 0.3);
 }
 .review__toggle--radio + .review__toggle-indicator {
   border-radius: 50%;
@@ -790,8 +818,8 @@ body {
 }
 .review__btn-wrapper {
   padding: 0 20px;
-  margin-top: 41px;
-  margin-bottom: 45px;
+  padding-top: 41px;
+  padding-bottom: 45px;
 }
 .review__btn {
   width: 100%;
@@ -817,6 +845,9 @@ body {
 }
 .review__btn:disabled {
   background-color: #e5e5e5;
+}
+.review__note {
+  display: none;
 }
 /* ----------photo.html--------------*/
 .gallery {
@@ -902,7 +933,6 @@ body {
 .video-controls {
   position: relative;
   width: 280px;
-  height: 101px;
   top: -45px;
   margin: 0 auto;
 }
@@ -931,6 +961,7 @@ body {
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 2;
 }
 .video-controls__main-controls {
   display: -ms-flexbox;
@@ -943,38 +974,34 @@ body {
   height: 66px;
   background-color: #f2f2f2;
 }
-.video-controls__play-btn {
+.video-controls__btn {
   padding: 0;
   margin: 0;
   border: none;
+  height: 20px;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+.video-controls__btn svg {
+  fill: #5c6870;
+}
+.video-controls__btn:hover svg {
+  fill: #333333;
+}
+.video-controls__btn:active svg {
+  fill: rgba(51, 51, 51, 0.3);
+  margin: 0;
+}
+.video-controls__btn--play {
   width: 16px;
-  height: 20px;
-  background-color: transparent;
-  background-image: url("../img/icon-video-replay.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
-.video-controls__subtitle-btn {
-  padding: 0;
-  margin: 0;
-  margin-left: auto;
-  border: none;
+.video-controls__btn--subtitle {
   width: 32px;
-  height: 20px;
-  background-color: transparent;
-  background-image: url("../img/icon-video-subtitles.svg");
-  background-position: 0 0;
+  margin-left: auto;
 }
-.video-controls__fullscreen-btn {
-  padding: 0;
-  margin: 0;
-  margin-left: 28px;
-  border: none;
+.video-controls__btn--fullscreen {
   width: 20px;
-  height: 20px;
-  background-color: transparent;
-  background-image: url("../img/icon-video-fullscreen.svg");
-  background-position: 0 0;
+  margin-left: 28px;
 }
 @media (min-width: 768px) {
   .page-header__logo {
@@ -1218,7 +1245,6 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0 7.8125%;
-    margin-bottom: 22px;
   }
   .review__title {
     width: 400px;
@@ -1335,15 +1361,16 @@ body {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    margin-top: 54px;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 65px;
   }
   .review__btn {
     width: 50%;
     margin: 0;
   }
   .review__note {
+    display: block;
     font-size: 14px;
     line-height: 26px;
     color: #333333;
@@ -1405,6 +1432,9 @@ body {
     width: 80%;
     margin-bottom: 17px;
   }
+  .video {
+    padding-bottom: 0;
+  }
   .video__title {
     width: auto;
     margin-bottom: 25px;
@@ -1423,7 +1453,39 @@ body {
     background-size: cover;
   }
   .video-controls {
+    width: 648px;
+    top: -93px;
+  }
+  .video-controls__scale-controls {
+    padding-top: 45px;
+    margin-left: 0;
+    background-color: transparent;
+  }
+  .video-controls__scale {
+    width: 389px;
+    margin-left: 93px;
+    z-index: 2;
+  }
+  .video-controls__toggle-scale {
+    left: 29.05%;
+    z-index: 2;
+  }
+  .video-controls__main-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 93px;
+    padding-left: 35px;
+    padding-right: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+  }
+  .video-controls__btn svg {
+    fill: white;
+  }
+  .video-controls__btn--fullscreen {
+    margin-left: 32px;
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
@@ -1623,7 +1685,7 @@ body {
     order: -1;
   }
   .review__btn-wrapper {
-    margin-bottom: 65px;
+    padding-bottom: 70px;
   }
   .gallery {
     margin-left: 0;
@@ -1654,7 +1716,25 @@ body {
     color: white;
   }
   .video {
-    margin-bottom: 43px;
+    padding-bottom: 43px;
+  }
+  .video__text {
+    margin-bottom: 72px;
+  }
+  .video video {
+    width: 800px;
+    background-image: url("../img/video-desktop@1x.jpg");
+  }
+  .video-controls {
+    width: 800px;
+  }
+  .video-controls__main-controls {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
+  .video video {
+    background-image: url("../img/video-desktop@2x.jpg");
   }
 }
 @media (max-width: 767px) {
