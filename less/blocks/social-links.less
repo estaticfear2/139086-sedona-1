@@ -1,20 +1,30 @@
 .social-links {
-  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
-  vertical-align: top;
 
   li {
     display: inline-block;
   }
 
   &__item {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 46px;
     height: 48px;
     margin-left: 6px;
     background-color: @bg-blue;
+    vertical-align: bottom;
+    text-align: center;
+    box-sizing: border-box;
+
+    svg {
+      fill: white;
+    }
 
     &--tw {
       margin-left: 0;
@@ -26,6 +36,10 @@
 
     &:active {
       background-color: #5496bd;
+
+      svg {
+        opacity: .3;
+      }
     }
   }
 }
