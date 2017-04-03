@@ -60,13 +60,13 @@
           <fieldset class="review__item review__item--contacts">
             <legend class="review__title">Контактная информация:</legend>
             <div class="review__wrapper">
-              <div class="review__wrapper review__wrapper--half">
+              <div class="review__wrapper review__wrapper--half review__wrapper--half-phone">
                 <label class="review__label review__label--phone" for="phone"><span class="visually-hidden">Контактный&nbsp;</span>телефон*:
                 </label>
                 <input class="review__input review__input--margin" type="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" name="phone" id="phone" placeholder="Введите телефон" required title="В формате 1-111-1111111">
                 <span class="review__error review__error--show">Ошибка, перепроверьте номер</span>
               </div>
-              <div class="review__wrapper review__wrapper--half">
+              <div class="review__wrapper review__wrapper--half review__wrapper--half-email">
                 <label class="review__label review__label--email" for="email">Электронная почта*:</label>
                 <input class="review__input review__input--margin" type="email" name="email" id="email" placeholder="Введите e-mail" required>
               </div>
@@ -176,7 +176,19 @@
       </footer>
     </div>
 
-    <script src="js/script.js"></script>
+    <div class="modal-content modal-content--success">
+      <h2 class="modal-content__title">Ваш отзыв отправлен!</h2>
+      <p class="modal-content__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="modal-content__close-btn modal-content__close-btn--success">Закрыть окно</button>
+    </div>
+
+    <div class="modal-content modal-content--failure">
+      <h2 class="modal-content__title">Что-то пошло не так!</h2>
+      <p class="modal-content__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить.</p>
+      <button class="modal-content__close-btn">Ок</button>
+    </div>
+
+<!--    <script src="js/script.js"></script>-->
     <script src="js/picturefill.js"></script>
   </body>
 </html>
