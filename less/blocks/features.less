@@ -13,7 +13,7 @@
 
     .features__item {
       padding-top: 9px;
-      padding-bottom: 15px; //такие селекторы допустимы по БЭМ?
+      padding-bottom: 14px;
     }
 
     .features__item:not(:last-child) {
@@ -27,9 +27,18 @@
 
   &__item {
     .container();
-    padding: 24px;
+    padding: 22px;
     padding-bottom: 27px;
     text-align: center;
+
+    &--order {
+      padding-top: 21px;
+      padding-bottom: 26px;
+    }
+
+    br {
+      display: none;
+    }
   }
 
   &__title {
@@ -71,7 +80,7 @@
     }
 
     &--gray {
-      padding-top: 15px;
+      padding-top: 14px;
 
       .features__item {
         padding-bottom: 33px;
@@ -95,6 +104,10 @@
 
       &--order {
         order: 2;
+      }
+
+      br {
+        display: block;
       }
     }
 
@@ -124,6 +137,8 @@
   .features {
 
     &--gray {
+      padding-bottom: 1px;
+
       .features__item {
         padding-top: 30px;
         padding-bottom: 52px;
@@ -131,12 +146,18 @@
     }
 
     &__item {
-      padding-top: 50px;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 37px;
+
+      &--order {
+        padding-left: 82px;
+        padding-right: 82px;
+        padding-top: 39px;
+      }
     }
 
     &__image {
-//      display: flex;
-//      align-items: center;
       height: 256px;
       overflow: hidden;
 
@@ -150,6 +171,11 @@
     &__title {
       width: 165px;
       margin: 0 auto;
+    }
+
+    &__number {
+      margin-top: 11px;
+      margin-bottom: 22px;
     }
   }
 }
