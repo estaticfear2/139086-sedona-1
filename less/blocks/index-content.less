@@ -92,6 +92,20 @@
     }
   }
 
+  &__map {
+    width: 100%;
+    height: 350px;
+    background-image: url("../img/bg-map-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-mobile@2x.jpg");
+    }
+  }
+
   &__map iframe{
     width: 100%;
   }
@@ -157,6 +171,15 @@
         margin-bottom: 79px;
       }
     }
+
+    &__map {
+      background-image: url("../img/bg-map-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-map-tablet@2x.jpg");
+      }
+    }
   }
 }
 
@@ -192,6 +215,15 @@
 
       &-form {
         margin-bottom: 64px;
+      }
+    }
+
+    &__map {
+      background-image: url("../img/bg-map-desktop@1x.jpg");
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-map-desktop@2x.jpg");
       }
     }
   }
