@@ -47,7 +47,7 @@
   }
 
   &__description {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
     color: #333333;
   }
 }
@@ -56,6 +56,7 @@
   .advantages {
     width: auto;
     display: flex;
+    flex-wrap: wrap;
     padding-top: 37px;
     margin-bottom: 0;
 
@@ -64,14 +65,17 @@
       padding: 100px 47px;
       padding-bottom: 34px;
       flex-grow: 1;
+      box-sizing: border-box;
 
       &--gift {
         order: 1;
+        padding-left: 44px;
+        padding-right: 44px;
       }
     }
 
     &__title {
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       font-size: 21px;
       text-align: center;
 
@@ -98,10 +102,12 @@
 @media @desktop-widths {
 
   .advantages {
-    padding-top: 37px;
+    padding-top: 38px;
 
     &__item {
       padding-bottom: 54px;
+      padding-left: 48px;
+      padding-right: 48px;
     }
   }
 }

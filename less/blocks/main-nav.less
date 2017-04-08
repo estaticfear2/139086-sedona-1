@@ -101,6 +101,7 @@
     width: auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .main-nav__item {
@@ -108,8 +109,8 @@
     text-align: center;
   }
 
-  .main-nav__item:nth-child(2) {
-    margin-right: auto;
+  .main-nav__item:nth-child(4n+2) {
+    margin-right: 20.3124%;
   }
 
   .main-nav__item a {
@@ -146,5 +147,14 @@
       color: rgba(0, 0, 0, .3);
     }
   }
+}
 
+@media @desktop-widths {
+  .main-nav__item {
+    flex-basis: 239px;
+  }
+
+  .main-nav__item:nth-child(4n+2) {
+    margin-right: 244px;
+  }
 }
