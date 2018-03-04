@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона - Каталог гостиниц</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="photo-page">
+  <svg style="display: none" xmlns="http://www.w3.org/2000/svg"><symbol id="icon-facebook" viewBox="0 0 8.672 18.944"><path d="M6.275 3.356h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.114H0v3.518h1.959v9.312h3.837V9.632h2.857V6.114H5.787c-.022-1.045-.037-2.405.488-2.758z"/></symbol><symbol id="icon-tick" viewBox="0 0 23.049 16.249"><path d="M22.801 1.299L21.75.248a.853.853 0 0 0-1.203 0L8.693 12.102 2.502 5.911a.853.853 0 0 0-1.203 0L.248 6.962a.852.852 0 0 0 0 1.202l7.837 7.837a.845.845 0 0 0 .608.246c.22.002.44-.079.608-.246l13.5-13.5a.852.852 0 0 0 0-1.202z"/></symbol><symbol id="icon-twitter" viewBox="0 0 17.5 14.663"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.283.153c1.736-.484 3.074.264 3.685 1.15.694-.225 1.372-.47 2.072-.69-.004.841-.538 1.478-.883 1.728.704.165 1.343-.481 1.343-.481-.175.977-1.035 1.746-1.611 1.977-.239 6.592-3.272 10.956-10.382 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.341.192 4.011-.412 4.835-1.15-.989-.293-2.761-.464-3.07-2.881.362.105.583.223 1.228.117C1.757 8.067.385 7.366.461 5.218c.294.319 1.1.523 1.381.461C1.117 5.444-.188 2.398.921.843 2.794 2.655 4.769 4.364 8.29 4.528c.216-2.24 1.171-3.74 2.993-4.375z"/></symbol><symbol id="icon-video-fullscreen" viewBox="0 0 20 20"><g><path d="M0 0v6h3V3h3V0H3zM3 14H0v6h6v-3H3zM17 0h-3v3h3v3h3V0zM17 17h-3v3h6v-6h-3z"/></g></symbol><symbol id="icon-video-replay" viewBox="0 0 16 20"><path d="M8 4V0L3 5l5 5V6c3.315 0 6 2.686 6 6s-2.685 6-6 6-6-2.686-6-6H0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></symbol><symbol id="icon-video-subtitles" viewBox="0 0 32 20"><path d="M29 0H3C1.35 0 0 1.35 0 3v14c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM14.403 15.854a8.61 8.61 0 0 1-1.678.164 5.986 5.986 0 0 1-1.976-.323c-.623-.214-1.172-.562-1.646-1.041s-.852-1.103-1.133-1.868c-.28-.766-.419-1.695-.419-2.786 0-1.134.157-2.085.471-2.851.315-.768.723-1.384 1.224-1.854a4.53 4.53 0 0 1 1.679-1.008 5.86 5.86 0 0 1 1.852-.307c.66 0 1.22.045 1.678.134.457.087.835.192 1.133.313l-.448 1.92a3.332 3.332 0 0 0-.902-.265A8.244 8.244 0 0 0 12.973 6c-.915 0-1.649.325-2.206.977-.558.651-.836 1.663-.836 3.031 0 .598.067 1.142.199 1.632.132.493.334.913.603 1.26.271.349.607.619 1.01.812.402.193.867.29 1.396.29.496 0 .915-.049 1.257-.148.342-.099.639-.227.893-.38l.463 1.841c-.354.249-.803.43-1.349.539zm8.698 0a8.618 8.618 0 0 1-1.678.164 5.986 5.986 0 0 1-1.976-.323c-.623-.214-1.172-.562-1.646-1.041s-.852-1.103-1.133-1.868c-.281-.767-.421-1.695-.421-2.786 0-1.134.157-2.085.471-2.851.314-.768.723-1.384 1.223-1.854a4.526 4.526 0 0 1 1.68-1.008 5.858 5.858 0 0 1 1.851-.307c.661 0 1.221.045 1.678.134a6.05 6.05 0 0 1 1.133.313l-.446 1.918a3.314 3.314 0 0 0-.901-.265A8.569 8.569 0 0 0 21.67 6c-.915 0-1.649.325-2.206.977-.558.651-.836 1.663-.836 3.031 0 .598.067 1.142.199 1.632.132.493.334.913.603 1.26.271.349.606.619 1.009.812.402.193.868.29 1.396.29.497 0 .915-.049 1.257-.148.342-.099.64-.227.894-.38l.463 1.841c-.353.249-.803.43-1.348.539z"/></symbol><symbol id="icon-youtube" viewBox="0 0 19.979 14.015"><path d="M17.145 0H2.835A2.842 2.842 0 0 0 0 2.835v8.345a2.842 2.842 0 0 0 2.835 2.835h14.31a2.842 2.842 0 0 0 2.835-2.835V2.835A2.844 2.844 0 0 0 17.145 0zM7.036 10.392V3.623l6.769 3.384-6.769 3.385z"/></symbol></svg>
+    <div class="page-wrapper">
+      <header class="page-header">
+        <h1 class="visually-hidden">HTML Academy: Седона</h1>
+        <a href="index.html" class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" width="187" height="96" alt="Sedona-Logo">
+          </picture>
+        </a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item main-nav__item--active">
+              <a>Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
+          <a class="main-nav__toggle main-nav__toggle--open" title="Закрыть меню"></a>
+        </nav>
+      </header>
+
+      <main class="index-content">
+
+        <div class="index-content__image index-content__image--inner">
+          <img src="img/text-sedona.svg" width="229" height="39" alt="Welcome">
+        </div>
+        <h2 class="index-content__title index-content__title--inner">Фото и видео</h2>
+        <p class="index-content__lead-in index-content__lead-in--inner">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+
+        <div class="gallery">
+
+          <section class="gallery__item gallery__item--current">
+            <a href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg" width="280" height="280" alt="Неродные просторы">
+              </picture>
+            </a>
+            <footer class="gallery__footer gallery__footer--current">
+              <h3 class="gallery__title">Неродные просторы</h3>
+              <p class="gallery__info">Автор фото:
+                <span class="gallery__author">Борис</span>
+              </p>
+              <span class="gallery__likes">1350</span>
+            </footer>
+          </section>
+
+          <section class="gallery__item">
+            <a href="#">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg" width="280" height="280" alt="Неродные просторы">
+              </picture>
+            </a>
+            <footer class="gallery__footer">
+              <h3 class="gallery__title">Местная растительность</h3>
+              <p class="gallery__info">Автор фото:
+                <span class="gallery__author">Сергей</span>
+              </p>
+              <span class="gallery__likes">143</span>
+            </footer>
+          </section>
+
+          <section class="gallery__item">
+            <a href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg" width="280" height="280" alt="Неродные просторы">
+              </picture>
+            </a>
+            <footer class="gallery__footer">
+              <h3 class="gallery__title">Дорога на север</h3>
+              <p class="gallery__info">Автор фото:
+                <span class="gallery__author">Петр</span>
+              </p>
+              <span class="gallery__likes">96</span>
+            </footer>
+          </section>
+
+          <section class="gallery__item">
+            <a href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg" width="280" height="280" alt="Неродные просторы">
+              </picture>
+            </a>
+            <footer class="gallery__footer">
+              <h3 class="gallery__title">Мост дьявола</h3>
+              <p class="gallery__info">Автор фото:
+                <span class="gallery__author">Антон</span>
+              </p>
+              <span class="gallery__likes">254</span>
+            </footer>
+          </section>
+
+        </div>
+
+        <div class="video">
+          <h2 class="video__title">Все еще сомневаетесь?</h2>
+          <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <video width="320" height="201">
+          </video>
+          <div class="video-controls">
+            <div class="video-controls__scale-controls">
+              <div class="video-controls__scale">
+                <button class="video-controls__toggle-scale" type="button"></button>
+              </div>
+            </div>
+            <div class="video-controls__main-controls">
+              <button class="video-controls__btn video-controls__btn--play" type="button">
+                <svg width="16px" height="20px">
+                  <use xlink:href="#icon-video-replay"></use>
+                </svg>
+              </button>
+              <button class="video-controls__btn video-controls__btn--subtitle" type="button">
+                <svg width="32px" height="20px">
+                  <use xlink:href="#icon-video-subtitles"></use>
+                </svg>
+              </button>
+              <button class="video-controls__btn video-controls__btn--fullscreen" type="button">
+                <svg width="20px" height="20px">
+                  <use xlink:href="#icon-video-fullscreen"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <p class="page-footer__tag">#visitsedona</p>
+
+        <ul class="page-footer__social social-links">
+          <li>
+            <a class="social-links__item social-links__item--tw" href="#">
+              <svg width="18px" height="14px">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-links__item social-links__item--fb" href="#">
+              <svg width="9px" height="18px">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-links__item social-links__item--yt" href="#">
+              <svg width="20px" height="14px">
+                <use xlink:href="#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="page-footer__copyright">
+          <b>Разработано</b>
+          <a href="#" class="page-footer__copyright-icon">
+            <b class="visually-hidden">HTML Academy</b>
+            <svg class="htmlacademy-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+            </svg>
+          </a>
+        </p>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/picturefill.js"></script>
+  </body>
+</html>
